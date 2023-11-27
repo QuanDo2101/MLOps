@@ -6,11 +6,9 @@ pipeline {
             //agent {docker 'xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106'}
             steps {
                 sh "pwd"
-                dir("/home/doqx"){
-                    sh "pwd"
-                    sh '''
-                        cd Vitis-AI
-                    '''
+                dir("~/"){
+                    sh "ls"
+                    
                 }
                 sh "pwd"
             }
