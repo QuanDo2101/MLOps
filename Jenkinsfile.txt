@@ -8,7 +8,12 @@ pipeline {
                 sh "pwd"
                 dir("/home/doq/"){
                     sh "pwd"
-                    
+                    source ~/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
+                    cd ~/Vitis-AI
+                    ./docker_run.sh xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106
+                    conda activate vitis-ai-pytorch
+                    cd examples/vai_runtime/resnet50_pt
+                    bash –x build.sh
                 }
                 sh "pwd"
             }
