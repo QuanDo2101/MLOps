@@ -6,9 +6,9 @@ pipeline {
             //agent {docker 'xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106'}
             steps {
                 sh "pwd"
-                dir("${env.WORKSPACE}"){
+                dir("/home/doq"){
                     sh "pwd"
-                    sh '''#!/bin/bash
+                    sh '''
                         source ~/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
                     '''
                 }
