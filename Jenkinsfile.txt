@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh "pwd"
                 dir("~/"){
-                    sh "cd Vitis-AI"
+                    sh "source ~/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux"
                     
                 }
                 sh "pwd"
