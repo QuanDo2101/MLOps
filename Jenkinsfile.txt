@@ -9,7 +9,7 @@ pipeline {
                 dir("/home/doq"){
                     sh "pwd"
                     sh '''
-                        source ~/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
+                        cd Vitis-AI
                     '''
                 }
                 sh "pwd"
