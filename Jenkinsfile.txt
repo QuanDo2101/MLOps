@@ -3,15 +3,18 @@ pipeline {
     
     stages {
         stage('Build model') {
-            agent { 
-                docker {image 'xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106'}
-            }
+            //agent { 
+            //    docker {image 'xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106'}
+            //}
             steps {
                 sh "pwd"
                 //source /var/lib/jenkins/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
-                dir("/home/doq/Vitis-AI/examples/vai_library/samples/yolov6"){
+                
+                dir("/home/doq/Vitis-AI/"){
                     sh "pwd"
+                    ./docker_run.sh xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106
                     sh ''' 
+                        cd examples/vai_library/samples/yolov6
                         ./build.sh
                     '''
                 }
