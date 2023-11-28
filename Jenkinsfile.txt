@@ -3,12 +3,12 @@ pipeline {
     
     stages {
         stage('Build model') {
-            //agent {docker 'xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106'}
             steps {
                 sh "pwd"
-                dir("/home/doq/"){
+                dir("/home/doq/Vitis-AI/board_setup/mpsoc"){
                     sh "pwd"
-                    source /petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
+                    sh ''' ./host_cross_compiler_setup.sh                
+                    '''
                 }
                 sh "pwd"
             }
