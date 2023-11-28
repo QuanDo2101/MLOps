@@ -5,7 +5,7 @@ pipeline {
         stage('Build model') {
             steps {
                 sh "pwd"
-                source var/lib/jenkins/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
+                source /var/lib/jenkins/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
                 dir("/home/doq/Vitis-AI/examples/vai_library/samples/yolov6"){
                     sh "pwd"
                     sh ''' 
