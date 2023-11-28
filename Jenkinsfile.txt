@@ -18,7 +18,7 @@ pipeline {
                     //sh 'conda env list'
                     echo 'finish conda'
                     //sh 'cd examples/vai_library/samples/yolov6'
-                    sh pwd
+                    sh "pwd"
                     echo 'finish build'
                 }
             }
