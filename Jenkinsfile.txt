@@ -21,7 +21,7 @@ pipeline {
                         cd examples/vai_library/samples/yolov6
                         ./build.sh
                         echo 'finish build'
-                        conda deactivate
+                        //conda deactivate
                     '''
                 }
             }
