@@ -17,12 +17,8 @@ pipeline {
                     //sh './docker_run.sh xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106'
                     //sh 'conda env list'
                     echo 'finish conda'
-                    sh ''' 
-                        cd examples/vai_library/samples/yolov6
-                        pwd
-                        //./build.sh
-                        //conda deactivate
-                    '''
+                    sh ' cd examples/vai_library/samples/yolov6'
+                    sh pwd
                     echo 'finish build'
                 }
             }
