@@ -8,17 +8,21 @@ pipeline {
             }
             steps {
                 sh "pwd"
+                echo 'inside Docker'
                 //source /var/lib/jenkins/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
                 
                 dir("/home/doq/Vitis-AI/"){
-                    sh "pwd"
+                    
+                
                     //sh './docker_run.sh xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106'
                     sh 'conda activate vitis-ai-pytorch'
+                    echo 'finish conda'
                     sh ''' 
                         cd examples/vai_library/samples/yolov6
                         ./build.sh
+                        echo 'finish build'
                     '''
-                    sh exit
+                    sh 'exit'
                 }
                 sh "pwd"
             }
