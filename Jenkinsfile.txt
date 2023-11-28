@@ -12,7 +12,7 @@ pipeline {
                 
                 dir("/home/doq/Vitis-AI/"){
                     sh "pwd"
-                    ./docker_run.sh 'xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106'
+                    ./docker_run.sh "xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106"
                     sh ''' 
                         cd examples/vai_library/samples/yolov6
                         ./build.sh
