@@ -19,10 +19,11 @@ pipeline {
                     echo 'finish conda'
                     sh ''' 
                         cd examples/vai_library/samples/yolov6
+                        pwd
                         ./build.sh
-                        echo 'finish build'
                         //conda deactivate
                     '''
+                    echo 'finish build'
                 }
             }
         }
