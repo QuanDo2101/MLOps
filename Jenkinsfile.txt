@@ -23,9 +23,7 @@ pipeline {
                         echo 'finish build'
                     '''
                     sh conda deactivate
-                    sh 'exit'
                 }
-                sh "pwd"
             }
         }
         
