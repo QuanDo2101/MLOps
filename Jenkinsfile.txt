@@ -3,15 +3,14 @@ pipeline {
     
     stages {
         stage('Build model') {
-            
+            //agent {docker 'xilinx/vitis-ai-pytorch-cpu:ubuntu2004-3.0.0.106'}
             steps {
                 sh "pwd"
-                //sh "cd /tools/Xilinx/Vitis-AI/"
-                //sh "./docker_run.sh xilinx/vitis-ai-pytorch-gpu:3.5.0.001-bbccde60d"
-                //echo 'inside Docker'
-                //sh "exit"
-                
-                
+                dir("/home/doq/"){
+                    sh "pwd"
+                    
+                }
+                sh "pwd"
             }
         }
         
