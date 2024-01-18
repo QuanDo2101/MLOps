@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh "pwd"
                 echo 'inside Docker'
-                //source /var/lib/jenkins/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
+                
                 docker.image(' xilinx/vitis-ai-pytorch-gpu:3.5.0.001-bbccde60d6').inside { 
         
                     echo 'start conda'
