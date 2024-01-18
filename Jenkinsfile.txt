@@ -6,18 +6,12 @@ pipeline {
             
             steps {
                 sh "pwd"
+                script:'''
+                cd /tools/Xilinx/Vitis-AI/
+                ./docker_run xilinx/vitis-ai-pytorch-gpu:3.5.0.001-bbccde60d
                 echo 'inside Docker'
                 
-                docker.image('xilinx/vitis-ai-pytorch-gpu:3.5.0.001-bbccde60d6').inside { 
-        
-                    echo 'start conda'
-               
-                    sh 'conda env list'
-                    echo 'finish conda'
-                   
-                    sh "pwd"
-                    echo 'finish build'
-                }
+                
             }
         }
         
