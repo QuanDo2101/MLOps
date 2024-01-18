@@ -9,6 +9,7 @@ pipeline {
                 sh "cd /tools/Xilinx/Vitis-AI/"
                 sh "./docker_run xilinx/vitis-ai-pytorch-gpu:3.5.0.001-bbccde60d"
                 echo 'inside Docker'
+                sh "exit"
                 
                 
             }
